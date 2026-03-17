@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+ {% load static %}
+<html>
+<head>
+   
+<title>Records</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+<!-- STUDENT -->
+<div class="section">
+<h2>Students</h2>
+
+{% if obj1 %}
+{% for k in obj1 %}
+<div class="card">
+<p><span class="label">First Name:</span> {{k.first_name}}</p>
+<p><span class="label">Last Name:</span> {{k.last_name}}</p>
+<p><span class="label">Contact:</span> {{k.contact}}</p>
+<p><span class="label">Email:</span> {{k.email}}</p>
+<p><span class="label">Age:</span> {{k.age}}</p>
+</div>
+{% endfor %}
+{% endif %}
+
+</div>
+
+
+<!-- TEACHER -->
+<div class="section">
+<h2>Teachers</h2>
+
+{% if obj2 %}
+{% for k in obj2 %}
+<div class="card">
+<p><span class="label">First Name:</span> {{k.first_name}}</p>
+<p><span class="label">Last Name:</span> {{k.last_name}}</p>
+<p><span class="label">Contact:</span> {{k.contact}}</p>
+<p><span class="label">Email:</span> {{k.email}}</p>
+<p><span class="label">Subject:</span> {{k.subject}}</p>
+</div>
+{% endfor %}
+{% endif %}
+
+</div>
+
+
+<!-- EMPLOYEE -->
+<div class="section">
+<h2>Employees</h2>
+
+{% if obj3 %}
+{% for k in obj3 %}
+<div class="card">
+<p><span class="label">First Name:</span> {{k.first_name}}</p>
+<p><span class="label">Last Name:</span> {{k.last_name}}</p>
+<p><span class="label">Contact:</span> {{k.contact}}</p>
+<p><span class="label">Email:</span> {{k.email}}</p>
+<p><span class="label">Department:</span> {{k.department}}</p>
+</div>
+{% endfor %}
+{% endif %}
+
+</div>
+
+
+<!-- CUSTOMER -->
+<div class="section">
+<h2>Customers</h2>
+
+{% if obj4 %}
+{% for k in obj4 %}
+<div class="card">
+<p><span class="label">First Name:</span> {{k.first_name}}</p>
+<p><span class="label">Last Name:</span> {{k.last_name}}</p>
+<p><span class="label">Contact:</span> {{k.contact}}</p>
+<p><span class="label">Email:</span> {{k.email}}</p>
+<p><span class="label">City:</span> {{k.city}}</p>
+</div>
+{% endfor %}
+{% endif %}
+
+</div>
+
+</div>
+
+</body>
+</html>
